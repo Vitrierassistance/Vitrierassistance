@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mentions légales de Vitrier Assistance Scomm — informations légales conformes à la législation belge.">
+<title>Mentions Légales — Vitrier Assistance | 0475 204 216</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;line-height:1.6}
+:root{--red:#c0392b;--red-dark:#922b21;--red-light:#fadbd8;--dark:#0f1923;--dark2:#1e0a0a;--border:#e5e5e5;--muted:#666;--bg:#f7f7f7}
+
+/* MOBILE EMERGENCY */
+.mob-emergency{background:var(--red);padding:14px 16px;display:flex;flex-direction:column;align-items:center;gap:5px}
+.mob-top{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.85);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+.pulse{width:8px;height:8px;background:#fff;border-radius:50%;animation:pulseAnim 1.4s infinite;display:inline-block;flex-shrink:0}
+@keyframes pulseAnim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.2;transform:scale(1.5)}}
+.mob-num{color:#fff;font-size:36px;font-weight:900;text-decoration:none;letter-spacing:.5px;line-height:1.1}
+.mob-num:active{opacity:.8}
+.mob-sub{color:rgba(255,255,255,.75);font-size:12px;font-weight:500;letter-spacing:.3px}
+@media(min-width:769px){.mob-emergency{display:none}}
+
+/* NAV */
+nav{background:#fff;border-bottom:1px solid var(--border);padding:13px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:500;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.logo{font-size:18px;font-weight:800;color:#1a1a1a;text-decoration:none;letter-spacing:-.3px}
+.logo span{color:var(--red)}
+.nav-r{display:flex;align-items:center;gap:16px}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:#555;text-decoration:none;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff;padding:10px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:7px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--red-dark)}
+@media(max-width:768px){.nav-links{display:none}.nav-cta{font-size:14px;padding:9px 15px}.logo{font-size:16px}}
+
+/* BANNER (replaces hero for inner pages) */
+.banner{background:linear-gradient(150deg,var(--dark) 0%,var(--dark2) 100%);color:#fff;padding:52px 24px 44px;position:relative;overflow:hidden}
+.banner::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:rgba(192,57,43,.12);border-radius:50%;pointer-events:none}
+.banner-inner{max-width:900px;margin:0 auto;position:relative}
+.live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,.25);border:1px solid rgba(192,57,43,.5);color:#f1948a;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.7px;text-transform:uppercase}
+.banner h1{font-size:38px;font-weight:900;line-height:1.15;margin-bottom:12px;letter-spacing:-.3px}
+.banner h1 em{color:#e74c3c;font-style:normal}
+.banner-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,.72);max-width:600px}
+@media(max-width:768px){.banner{padding:32px 16px 36px}.banner h1{font-size:26px}.banner-desc{font-size:14px}}
+
+/* CONTENT */
+.content{max-width:900px;margin:0 auto;padding:44px 24px 60px}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);text-decoration:none;margin-bottom:28px;transition:color .2s;font-weight:500}
+.back:hover{color:var(--red)}
+
+/* CARDS — light */
+.card{background:#fff;border-radius:14px;border:1px solid var(--border);padding:28px 32px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.card h2{font-size:19px;font-weight:800;color:#1a1a1a;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--red);display:inline-block}
+.card p{font-size:15px;color:#444;line-height:1.85;margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.card ul{margin:10px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.card ul li{font-size:14px;color:#444;line-height:1.6;padding-left:22px;position:relative}
+.card ul li::before{content:'✔';position:absolute;left:0;color:var(--red);font-size:11px;top:3px}
+
+/* CARDS — dark (same as urgence/services/hero) */
+.card-dark{background:linear-gradient(150deg,var(--dark) 0%,var(--dark2) 100%);border-radius:14px;padding:28px 32px;margin-bottom:18px;position:relative;overflow:hidden}
+.card-dark::before{content:'';position:absolute;bottom:-40px;right:-40px;width:200px;height:200px;background:rgba(192,57,43,.1);border-radius:50%;pointer-events:none}
+.card-dark h2{font-size:19px;font-weight:800;color:#fff;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #e74c3c;display:inline-block;position:relative}
+.card-dark p{font-size:15px;color:rgba(255,255,255,.72);line-height:1.85;margin-bottom:12px;position:relative}
+.card-dark p:last-child{margin-bottom:0}
+.card-dark p strong{color:#fff}
+.card-dark ul{margin:10px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;position:relative}
+.card-dark ul li{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6;padding-left:22px;position:relative}
+.card-dark ul li::before{content:'✔';position:absolute;left:0;color:#e74c3c;font-size:11px;top:3px}
+
+/* HIGHLIGHT BOX */
+.highlight{background:#fff3e0;border:1.5px solid #f39c12;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;color:#7d4e00;font-weight:600;line-height:1.7}
+.info-box{background:#e3f2fd;border:1.5px solid #2980b9;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;color:#1a3a52;line-height:1.7}
+
+/* PRICE GRID */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:18px 0}
+.price-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center}
+.price-card.dark{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.price-card h3{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.price-card.dark h3{color:rgba(255,255,255,.55)}
+.price-card .price{font-size:36px;font-weight:900;color:var(--red);margin-bottom:6px;line-height:1}
+.price-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.price-card.dark p{color:rgba(255,255,255,.5)}
+@media(max-width:480px){.price-grid{grid-template-columns:1fr 1fr}}
+
+/* ADDRESS GRID */
+.addr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.addr-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:22px}
+.addr-card h3{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+.addr-card p{font-size:15px;color:#1a1a1a;line-height:1.9;font-weight:500}
+
+/* CTA BLOCK */
+.cta-block{background:linear-gradient(150deg,var(--dark) 0%,var(--dark2) 100%);border-radius:14px;padding:40px 32px;text-align:center;margin-top:32px;position:relative;overflow:hidden}
+.cta-block::before{content:'';position:absolute;bottom:-50px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:rgba(192,57,43,.1);border-radius:50%;pointer-events:none}
+.cta-block h3{font-size:24px;font-weight:900;color:#fff;margin-bottom:10px;position:relative}
+.cta-block p{font-size:14px;color:rgba(255,255,255,.62);margin-bottom:24px;line-height:1.7;position:relative}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:16px;font-weight:700;padding:14px 30px;border-radius:9px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(192,57,43,.4);margin:5px;position:relative}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-1px)}
+.btn-ghost-w{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;font-size:15px;font-weight:600;padding:14px 26px;border-radius:9px;text-decoration:none;border:1px solid rgba(255,255,255,.2);margin:5px;transition:background .2s;position:relative}
+.btn-ghost-w:hover{background:rgba(255,255,255,.18)}
+.cta-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:20px;position:relative}
+.cta-ti{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.6)}
+.cta-ti .ok{color:#2ecc71}
+@media(max-width:600px){.btn-red,.btn-ghost-w{width:100%;justify-content:center}}
+
+/* FOOTER */
+footer{background:#0d0d0d;color:rgba(255,255,255,.5);padding:48px 24px 28px}
+.footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px}
+.fc h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:.3px}
+.fc p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
+.fc a{color:rgba(255,255,255,.45);font-size:13px;line-height:2.1;text-decoration:none;display:block;transition:color .2s}
+.fc a:hover{color:#fff}
+.fc-phone{color:#e74c3c !important;font-size:18px !important;font-weight:800 !important}
+.footer-bottom{max-width:900px;margin:24px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:12px;color:rgba(255,255,255,.2)}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr 1fr}}
+
+/* STICKY */
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;flex-direction:column}
+.sticky-top{background:#0f1923;padding:4px;text-align:center;font-size:11px;color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.3px}
+.sticky a{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;background:var(--red);color:#fff;font-size:18px;font-weight:900;text-decoration:none;animation:stickyGlow 2.5s infinite}
+@keyframes stickyGlow{0%,100%{background:var(--red)}50%{background:var(--red-dark)}}
+@media(max-width:768px){.sticky{display:flex}body{padding-bottom:72px}}</style>
+</head>
+<body>
+
+<div class="mob-emergency">
+  <div class="mob-top"><span class="pulse"></span> Vitrier disponible maintenant</div>
+  <a href="tel:+32475204216" class="mob-num">📞 0475 204 216</a>
+  <div class="mob-sub">Urgence 24h/24 &nbsp;·&nbsp; 7j/7 &nbsp;·&nbsp; Dans l'heure</div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">Vitrier<span>Assistance</span>.be</a>
+  <div class="nav-r">
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#avis">Avis</a></li>
+      <li><a href="index.html#zones">Zones</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="tel:+32475204216" class="nav-cta">📞 0475 204 216</a>
+  </div>
+</nav>
+<div class="banner">
+  <div class="banner-inner">
+    <div class="live-badge"><span class="pulse"></span> &nbsp;Mentions légales</div>
+    <h1>Mentions <em>légales</em></h1>
+    <p class="banner-desc">Informations légales relatives à Vitrier Assistance — Scomm, conformément à la législation belge.</p>
+  </div>
+</div>
+<div class="content">
+  <a href="index.html" class="back">← Retour au site</a>
+
+  <div class="card">
+    <h2>Identité de l'entreprise</h2>
+    <ul>
+      <li><strong>Dénomination sociale :</strong> Vitrier Assistance / Scomm</li>
+      <li><strong>Forme juridique :</strong> Scomm (Société en commandite simple)</li>
+      <li><strong>Siège social :</strong> Brusselsesteenweg 18A, 1730 Asse</li>
+      <li><strong>Adresse d'exploitation :</strong> Rue de Grand Bigard 14, 1084 Berchem-Sainte-Agathe</li>
+      <li><strong>Numéro de TVA :</strong> BE XXXX.XXX.XXX</li>
+      <li><strong>Téléphone :</strong> 0475 204 216</li>
+      <li><strong>Email :</strong> info@vitrierassistance.be</li>
+    </ul>
+  </div>
+  <div class="card-dark">
+    <h2>Activité</h2>
+    <p>Vitrier Assistance est spécialisée dans le <strong>dépannage vitrier d'urgence</strong>, le remplacement de vitrages, la sécurisation après effraction et la pose de tous types de vitrage en Belgique francophone.</p>
+  </div>
+  <div class="card">
+    <h2>Responsabilité</h2>
+    <p>Les informations présentes sur ce site sont fournies à titre indicatif. Vitrier Assistance s'efforce de maintenir ces informations à jour mais ne peut garantir leur exhaustivité à tout moment.</p>
+  </div>
+  <div class="card">
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble du contenu de ce site (textes, images, logos) est la propriété exclusive de Vitrier Assistance. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
+  </div>
+  <div class="card">
+    <h2>Données personnelles</h2>
+    <p>Pour toute information relative au traitement de vos données personnelles, consultez notre <a href="politique-confidentialite.html" style="color:var(--red);font-weight:700">Politique de confidentialité</a>.</p>
+  </div>
+
+
+<div class="cta-block">
+  <h3>Une question ? On vous répond maintenant.</h3>
+  <p>Disponible 24h/24, 7j/7 — devis gratuit par téléphone, sans engagement.</p>
+  <a href="tel:+32475204216" class="btn-red">📞 0475 204 216</a>
+  <a href="index.html#contact" class="btn-ghost-w">✉️ Devis gratuit</a>
+  <div class="cta-trust">
+    <div class="cta-ti"><span class="ok">✔</span> Devis gratuit</div>
+    <div class="cta-ti"><span class="ok">✔</span> Sans engagement</div>
+    <div class="cta-ti"><span class="ok">✔</span> Agréé assurances</div>
+    <div class="cta-ti"><span class="ok">✔</span> Prix fixe garanti</div>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="fc">
+      <h4>Vitrier Assistance</h4>
+      <p>Votre vitrier d'urgence<br>en Belgique. 24h/24, 7j/7.</p>
+      <a href="tel:+32475204216" class="fc-phone" style="margin-top:10px">📞 0475 204 216</a>
+      <a href="mailto:info@vitrierassistance.be" style="margin-top:4px">info@vitrierassistance.be</a>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <a href="intervention-de-nuit.html">Interventions de nuit</a>
+      <a href="types-de-vitrage.html">Les types de vitrages</a>
+      <a href="remplacement-de-vitres.html">Remplacement de vitres</a>
+      <a href="assistance-securisation.html">Assistance sécurisation</a>
+      <a href="assistance-depannage-urgence.html">Dépannage urgence</a>
+      <a href="vitrine-commerce.html">Vitrine de commerce</a>
+    </div>
+    <div class="fc">
+      <h4>Infos</h4>
+      <a href="nos-prix.html">Nos prix</a>
+      <a href="nos-devis.html">Nos devis</a>
+      <a href="nos-adresses.html">Nos adresses</a>
+      <a href="politique-confidentialite.html">Confidentialité</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+    <div class="fc">
+      <h4>Zones</h4>
+      <a href="index.html#zones">Bruxelles (19 communes)</a>
+      <a href="index.html#zones">Brabant Wallon</a>
+      <a href="index.html#zones">Namur</a>
+      <a href="index.html#zones">Charleroi</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 VitrierAssistance.be — Tous droits réservés &nbsp;·&nbsp; TVA : BE XXXX.XXX.XXX</div>
+</footer>
+<div class="sticky">
+  <div class="sticky-top">⚡ Vitrier disponible maintenant — appuyez pour appeler</div>
+  <a href="tel:+32475204216">📞 Appeler maintenant — 0475 204 216</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,1966 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vitrier d'urgence 24h/24 en Belgique — Intervention dans l'heure. Remplacement vitre, sécurisation après cambriolage. Bruxelles, Namur, Charleroi. 0475 204 216"
+    />
+    <title>Vitrier Assistance — Urgence 24h/24 | 0475 204 216</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #fff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      :root {
+        --red: #c0392b;
+        --red-dark: #922b21;
+        --red-light: #fadbd8;
+        --dark: #0f1923;
+        --dark2: #1e0a0a;
+        --border: #e5e5e5;
+        --muted: #666;
+        --bg: #f7f7f7;
+      }
+
+      /* ===================== MOBILE EMERGENCY ===================== */
+      .mob-emergency {
+        background: var(--red);
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+      .mob-top {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+      .pulse {
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+        animation: pulseAnim 1.4s infinite;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      @keyframes pulseAnim {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.2;
+          transform: scale(1.5);
+        }
+      }
+      .mob-num {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 900;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        line-height: 1.1;
+      }
+      .mob-num:active {
+        opacity: 0.8;
+      }
+      .mob-sub {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+      @media (min-width: 769px) {
+        .mob-emergency {
+          display: none;
+        }
+      }
+
+      /* ===================== NAV ===================== */
+      nav {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 13px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      }
+      .logo {
+        font-size: 18px;
+        font-weight: 800;
+        color: #1a1a1a;
+        text-decoration: none;
+        letter-spacing: -0.3px;
+      }
+      .logo span {
+        color: var(--red);
+      }
+      .nav-r {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 13px;
+        color: #555;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--red);
+      }
+      .nav-cta {
+        background: var(--red);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+      .nav-cta:hover {
+        background: var(--red-dark);
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-cta {
+          font-size: 14px;
+          padding: 9px 15px;
+        }
+        .logo {
+          font-size: 16px;
+        }
+      }
+
+      /* ===================== HERO ===================== */
+      .hero {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        color: #fff;
+        padding: 60px 24px 52px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 320px;
+        height: 320px;
+        background: rgba(192, 57, 43, 0.12);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(192, 57, 43, 0.25);
+        border: 1px solid rgba(192, 57, 43, 0.5);
+        color: #f1948a;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+      .hero h1 {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+      }
+      .hero h1 em {
+        color: #e74c3c;
+        font-style: normal;
+      }
+      .hero-brand {
+        font-size: 112px;
+        font-weight: 900;
+        color: #fff;
+        letter-spacing: -3px;
+        line-height: 1;
+        margin-top: 16px;
+        display: block;
+      }
+      .hero-brand span { color: #e74c3c; }
+      @media (max-width: 768px) {
+        .hero-brand { font-size: 72px; letter-spacing: -1px; margin-top: 12px; }
+      }
+      @media (max-width: 480px) {
+        .hero-brand { font-size: 52px; letter-spacing: -.5px; }
+      }
+      .hero-desc {
+        font-size: 17px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 32px;
+        max-width: 600px;
+      }
+      .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+      .btn-call {
+        background: var(--red);
+        color: #fff;
+        font-size: 50px;
+        font-weight: 900;
+        padding: 18px 38px;
+        border-radius: 9px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s;
+        box-shadow: 0 4px 24px rgba(192, 57, 43, 0.45);
+      }
+      .btn-call:hover {
+        background: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 18px 26px;
+        border-radius: 9px;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background 0.2s;
+      }
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.17);
+      }
+      .hero-trust {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .htrust {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .htrust .ok {
+        color: #2ecc71;
+        font-size: 14px;
+      }
+
+      /* urgency counter */
+      .hero-urgency {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        padding: 10px 16px;
+        margin-bottom: 24px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .hero-urgency strong {
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 32px 16px 40px;
+        }
+        .hero h1 {
+          font-size: 28px;
+        }
+        .hero-desc {
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+        .btn-call {
+          font-size: 19px;
+          padding: 15px 22px;
+          width: 100%;
+          justify-content: center;
+        }
+        .btn-ghost {
+          font-size: 14px;
+          padding: 13px 20px;
+          width: 100%;
+          justify-content: center;
+        }
+        .hero-trust {
+          gap: 10px;
+        }
+        .htrust {
+          font-size: 12px;
+        }
+      }
+
+      /* ===================== PILLARS ===================== */
+      .pillars {
+        background: #fff;
+        padding: 40px 24px;
+        border-bottom: 1px solid var(--border);
+      }
+      .pillars-inner {
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .pillar {
+        border-radius: 14px;
+        padding: 26px 18px 22px;
+        text-align: center;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        position: relative;
+      }
+      .pillar:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      }
+      .p1 {
+        background: #f8f9fa;
+        border: 1.5px solid #dee2e6;
+      }
+      .p2 {
+        background: #f8f9fa;
+        border: 1.5px solid #dee2e6;
+      }
+      .p3 {
+        background: #f8f9fa;
+        border: 1.5px solid #dee2e6;
+      }
+      .p4 {
+        background: #f8f9fa;
+        border: 1.5px solid #dee2e6;
+      }
+      .p-badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+      }
+      .p1 .p-badge {
+        background: var(--red);
+        color: #fff;
+      }
+      .p2 .p-badge {
+        background: var(--red);
+        color: #fff;
+      }
+      .p3 .p-badge {
+        background: var(--red);
+        color: #fff;
+      }
+      .p4 .p-badge {
+        background: var(--red);
+        color: #fff;
+      }
+      .p-icon {
+        font-size: 34px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .p-name {
+        font-size: 16px;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .p-list {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .p-list li {
+        font-size: 12px;
+        color: #444;
+        line-height: 1.5;
+        list-style: none;
+        display: flex;
+        gap: 6px;
+      }
+      .p-list li::before {
+        content: "✔";
+        font-size: 10px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .p1 .p-list li::before {
+        color: var(--red);
+      }
+      .p2 .p-list li::before {
+        color: var(--red);
+      }
+      .p3 .p-list li::before {
+        color: var(--red);
+      }
+      .p4 .p-list li::before {
+        color: var(--red);
+      }
+      @media (max-width: 680px) {
+        .pillars-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .pillar {
+          padding: 18px 12px;
+        }
+      }
+      @media (max-width: 380px) {
+        .pillars-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ===================== URGENCE ===================== */
+      .urgence {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        padding: 56px 24px;
+      }
+      .urgence-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .sec-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(192, 57, 43, 0.25);
+        border: 1px solid rgba(192, 57, 43, 0.5);
+        color: #f1948a;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 14px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+      .sec-title {
+        font-size: 28px;
+        font-weight: 900;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+      .sec-sub {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 28px;
+        line-height: 1.6;
+      }
+      .urgence-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .u-card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 3px solid #e74c3c;
+        border-radius: 12px;
+        padding: 24px;
+        transition: background 0.2s;
+      }
+      .u-card:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .u-icon {
+        font-size: 28px;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .u-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .u-card p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.62);
+        line-height: 1.7;
+      }
+      .urgence-cta {
+        margin-top: 36px;
+        text-align: center;
+      }
+      .urgence-cta .sub {
+        margin-top: 10px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .btn-red {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--red);
+        color: #fff;
+        font-size: 50px;
+        font-weight: 700;
+        padding: 14px 30px;
+        border-radius: 9px;
+        text-decoration: none;
+        transition: all 0.2s;
+        box-shadow: 0 4px 20px rgba(192, 57, 43, 0.35);
+      }
+      .btn-red:hover {
+        background: var(--red-dark);
+        transform: translateY(-1px);
+      }
+      @media (max-width: 480px) {
+        .urgence-grid {
+          grid-template-columns: 1fr;
+        }
+        .btn-red {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      /* ===================== SERVICES ===================== */
+      .services {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        padding: 56px 24px;
+      }
+      .services-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .services-header {
+        margin-bottom: 36px;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .s-card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 24px;
+        transition: all 0.2s;
+      }
+      .s-card:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(231, 76, 60, 0.5);
+        transform: translateY(-2px);
+      }
+      .s-icon {
+        font-size: 30px;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .s-card h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 7px;
+      }
+      .s-card p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.58);
+        line-height: 1.65;
+      }
+      @media (max-width: 480px) {
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .s-card {
+          padding: 16px;
+        }
+        .s-card p {
+          display: none;
+        }
+        .s-icon {
+          font-size: 24px;
+        }
+      }
+
+      /* ===================== PROCESS ===================== */
+      .process {
+        background: #fff;
+        padding: 60px 24px;
+      }
+      .process-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .process .sec-title {
+        color: #1a1a1a;
+      }
+      .process .sec-sub {
+        color: var(--muted);
+      }
+      .steps {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+      }
+      .step {
+        display: flex;
+        gap: 20px;
+        position: relative;
+        padding-bottom: 28px;
+      }
+      .step:last-child {
+        padding-bottom: 0;
+      }
+      .step:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 19px;
+        top: 44px;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #e74c3c, var(--border));
+      }
+      .step-n {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 15px;
+        flex-shrink: 0;
+        box-shadow: 0 4px 12px rgba(192, 57, 43, 0.35);
+      }
+      .step-body h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding-top: 8px;
+        color: #1a1a1a;
+      }
+      .step-body p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ===================== ASSURANCE ===================== */
+      .assurance {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        padding: 56px 24px;
+      }
+      .assurance-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 32px;
+      }
+      .assurance-icon {
+        font-size: 60px;
+        flex-shrink: 0;
+      }
+      .assurance-body h2 {
+        font-size: 28px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .assurance-body h2 em {
+        color: #e74c3c;
+        font-style: normal;
+      }
+      .assurance-body p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.75;
+        max-width: 560px;
+        margin-bottom: 16px;
+      }
+      .assurance-body p strong {
+        color: #fff;
+      }
+      .assurance-checks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .a-check {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .a-check .ok {
+        color: #2ecc71;
+      }
+      .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px 22px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .btn-outline-white:hover {
+        background: rgba(255, 255, 255, 0.18);
+      }
+      @media (max-width: 500px) {
+        .assurance-icon {
+          display: none;
+        }
+        .assurance-body h2 {
+          font-size: 22px;
+        }
+      }
+
+      /* ===================== AVIS GOOGLE ===================== */
+      .avis {
+        background: var(--bg);
+        padding: 60px 24px;
+      }
+      .avis-inner {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .google-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+      .google-header h2 {
+        font-size: 26px;
+        font-weight: 900;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+      }
+      .google-header p {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .google-score {
+        background: #fff;
+        border-radius: 14px;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        flex-shrink: 0;
+      }
+      .g-text {
+        font-size: 15px;
+        font-weight: 800;
+      }
+      .g-b {
+        color: #4285f4;
+      }
+      .g-r {
+        color: #ea4335;
+      }
+      .g-y {
+        color: #fbbc05;
+      }
+      .g-g {
+        color: #34a853;
+      }
+      .g-div {
+        width: 1px;
+        height: 40px;
+        background: var(--border);
+      }
+      .g-num {
+        font-size: 40px;
+        font-weight: 900;
+        color: #1a1a1a;
+        line-height: 1;
+      }
+      .g-right {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .g-stars {
+        color: #fbbc05;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      .g-count {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .avis-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+      .avis-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
+      .avis-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+      .avis-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 800;
+        flex-shrink: 0;
+        color: #fff;
+      }
+      .av1 {
+        background: #4285f4;
+      }
+      .av2 {
+        background: #ea4335;
+      }
+      .av3 {
+        background: #34a853;
+      }
+      .av4 {
+        background: #ff6d00;
+      }
+      .av5 {
+        background: #9c27b0;
+      }
+      .av6 {
+        background: #00acc1;
+      }
+      .avis-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 1px;
+      }
+      .avis-date {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .avis-stars {
+        display: flex;
+        gap: 1px;
+        margin-bottom: 10px;
+      }
+      .avis-stars span {
+        color: #fbbc05;
+        font-size: 17px;
+      }
+      .avis-card p {
+        font-size: 13px;
+        color: #444;
+        line-height: 1.7;
+      }
+      .avis-loc {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+      @media (max-width: 480px) {
+        .avis-grid {
+          grid-template-columns: 1fr;
+        }
+        .google-header {
+          flex-direction: column;
+        }
+        .google-score {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      /* ===================== STATS ===================== */
+      .stats {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        padding: 40px 24px;
+      }
+      .stats-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 14px;
+      }
+      .stat {
+        text-align: center;
+        padding: 22px 12px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.2s;
+      }
+      .stat:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .stat-n {
+        font-size: 30px;
+        font-weight: 900;
+        color: #e74c3c;
+        line-height: 1;
+      }
+      .stat-l {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 6px;
+        line-height: 1.4;
+      }
+
+      /* ===================== FAQ ===================== */
+      .faq {
+        background: #fff;
+        padding: 60px 24px;
+      }
+      .faq-inner {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .faq .sec-title {
+        color: #1a1a1a;
+      }
+      .faq .sec-sub {
+        color: var(--muted);
+      }
+      .faq-list {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .faq-q {
+        padding: 16px 20px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg);
+        user-select: none;
+        gap: 12px;
+        transition: background 0.2s;
+      }
+      .faq-q:hover {
+        background: #efefef;
+      }
+      .faq-arr {
+        color: var(--muted);
+        transition: transform 0.25s;
+        font-size: 11px;
+        flex-shrink: 0;
+      }
+      .faq-q.open .faq-arr {
+        transform: rotate(180deg);
+      }
+      .faq-a {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.3s ease;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.75;
+      }
+      .faq-a.open {
+        max-height: 300px;
+        padding: 16px 20px;
+      }
+
+      /* ===================== CTA FINAL ===================== */
+      .cta-final {
+        background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
+        padding: 72px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-final::before {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 400px;
+        background: rgba(192, 57, 43, 0.1);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .cta-final h2 {
+        font-size: 36px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 14px;
+        line-height: 1.2;
+        position: relative;
+      }
+      .cta-final h2 em {
+        color: #e74c3c;
+        font-style: normal;
+      }
+      .cta-final p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.68);
+        margin-bottom: 36px;
+        line-height: 1.8;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+      .cta-big {
+        background: var(--red);
+        color: #fff;
+        font-size: 28px;
+        font-weight: 900;
+        padding: 20px 50px;
+        border-radius: 12px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.2s;
+        box-shadow: 0 8px 32px rgba(192, 57, 43, 0.55);
+        position: relative;
+      }
+      .cta-big:hover {
+        background: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .cta-info {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 16px;
+        position: relative;
+      }
+      .cta-trust {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 28px;
+        position: relative;
+      }
+      .cta-trust-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .cta-trust-item .ok {
+        color: #2ecc71;
+      }
+      @media (max-width: 768px) {
+        .cta-final h2 {
+          font-size: 24px;
+        }
+        .cta-final p {
+          font-size: 14px;
+          margin-bottom: 28px;
+        }
+        .cta-big {
+          font-size: 21px;
+          padding: 16px 28px;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      /* ===================== ZONES ===================== */
+      .zones {
+        background: var(--bg);
+        padding: 52px 24px;
+      }
+      .zones-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .zones .sec-title {
+        color: #1a1a1a;
+      }
+      .zones .sec-sub {
+        color: var(--muted);
+      }
+      .zones-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+      }
+      .zone {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 7px;
+        padding: 7px 14px;
+        font-size: 13px;
+        color: #555;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .zone:hover {
+        border-color: var(--red);
+        color: var(--red);
+      }
+
+      /* ===================== FOOTER ===================== */
+      footer {
+        background: #0d0d0d;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 48px 24px 28px;
+      }
+      .footer-grid {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 28px;
+      }
+      .fc h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+        letter-spacing: 0.3px;
+      }
+      .fc p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.9;
+      }
+      .fc a {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 13px;
+        line-height: 2.1;
+        text-decoration: none;
+        display: block;
+        transition: color 0.2s;
+      }
+      .fc a:hover {
+        color: #fff;
+      }
+      .fc-phone {
+        color: #e74c3c !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+      }
+      .footer-bottom {
+        max-width: 900px;
+        margin: 24px auto 0;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.2);
+      }
+      @media (max-width: 480px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* ===================== STICKY MOBILE BAR ===================== */
+      .sticky {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        flex-direction: column;
+      }
+      .sticky-top {
+        background: #0f1923;
+        padding: 4px;
+        text-align: center;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+      .sticky a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+        background: var(--red);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        text-decoration: none;
+        animation: stickyGlow 2.5s infinite;
+      }
+      @keyframes stickyGlow {
+        0%,
+        100% {
+          background: var(--red);
+        }
+        50% {
+          background: var(--red-dark);
+        }
+      }
+      @media (max-width: 768px) {
+        .sticky {
+          display: flex;
+        }
+        body {
+          padding-bottom: 72px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- MOBILE EMERGENCY — 1ère chose vue sur téléphone -->
+    <div class="mob-emergency">
+      <div class="mob-top">
+        <span class="pulse"></span> Vitrier disponible maintenant
+      </div>
+      <a href="tel:+32475204216" class="mob-num">📞 0475 204 216</a>
+      <div class="mob-sub">
+        Urgence 24h/24 &nbsp;·&nbsp; 7j/7 &nbsp;·&nbsp; Dans l'heure
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="logo">Vitrier<span>Assistance</a>
+      <div class="nav-r">
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#zones">Zones</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="tel:+32475204216" class="nav-cta">📞 0475 204 216</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Vitre cassée ?<br /><em>On arrive en moins d'1 heure.</em></h1>
+        <div class="live-badge">
+          <span class="pulse"></span> &nbsp;Vitrier disponible maintenant
+        </div>
+        <strong class="hero-brand">Vitrier<span>Assistance</span>.be</strong>
+        <p class="hero-desc">
+          Cambriolage, vandalisme, accident : nos vitriers professionnels
+          sécurisent et remplacent votre vitrage en urgence — 24h/24, 7j/7,
+          partout en Belgique francophone.
+        </p>
+        <div class="hero-urgency">
+          <span class="pulse"></span>
+          <span
+            >Prochain créneau disponible : <strong>maintenant</strong> — vitrier
+            en attente de votre appel</span
+          >
+        </div>
+        <div class="hero-btns">
+          <a href="tel:+32475204216" class="btn-call">📞 0475 204 216</a>
+          <a href="#contact" class="btn-ghost">✉️ Devis gratuit</a>
+        </div>
+        <div class="hero-trust">
+          <div class="htrust">
+            <span class="ok">✔</span> Intervention 30–60 min
+          </div>
+          <div class="htrust"><span class="ok">✔</span> Devis gratuit</div>
+          <div class="htrust"><span class="ok">✔</span> Agréé assurances</div>
+          <div class="htrust"><span class="ok">✔</span> Sécurisation</div>
+          <div class="htrust">
+            <span class="ok">✔</span> +20 ans d'expérience
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <div class="pillars">
+      <div class="pillars-inner">
+        <div class="pillars-grid">
+          <div class="pillar p1">
+            <span class="p-badge">Déplacement</span>
+            <span class="p-icon">🚗</span>
+            <div class="p-name">On vient chez vous</div>
+            <ul class="p-list">
+              <li>Déplacement de jour gratuit</li>
+              <li>Nuit, week-end &amp; jours fériés</li>
+              <li>Forfait nuit : 60€</li>
+            </ul>
+          </div>
+          <div class="pillar p2">
+            <span class="p-badge">Rapidité</span>
+            <span class="p-icon">⚡</span>
+            <div class="p-name">Dans l'heure</div>
+            <ul class="p-list">
+              <li>Intervention express</li>
+              <li>30 à 60 min après appel</li>
+              <li>Disponible 24h/24 &amp; 7j/7</li>
+            </ul>
+          </div>
+          <div class="pillar p3">
+            <span class="p-badge">Devis</span>
+            <span class="p-icon">📋</span>
+            <div class="p-name">Nos devis</div>
+            <ul class="p-list">
+              <li>Devis gratuit jour et nuit</li>
+              <li>En ligne de jour</li>
+              <li>Sur place de nuit</li>
+            </ul>
+          </div>
+          <div class="pillar p4">
+            <span class="p-badge">Assurance</span>
+            <span class="p-icon">🛡️</span>
+            <div class="p-name">Agréé assurances</div>
+            <ul class="p-list">
+              <li>Convention de facturation</li>
+              <li>Direct avec votre assurance</li>
+              <li>Franchise à votre charge</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- URGENCE + SERVICES — bloc unifié -->
+    <section class="urgence" id="services">
+      <div class="urgence-inner">
+
+        <!-- PARTIE 1 : URGENCE -->
+        <div class="sec-badge"><span class="pulse"></span> &nbsp;Intervention immédiate</div>
+        <div class="sec-title">🚨 Nous intervenons immédiatement</div>
+        <div class="sec-sub">Ne restez pas avec une fenêtre ou une porte non sécurisée — chaque minute compte.</div>
+        <div class="urgence-grid">
+          <div class="u-card">
+            <span class="u-icon">🚪</span>
+            <h3>Assistance dépannage urgence</h3>
+            <p>Vitrier Assistance intervient rapidement 24h/24 à Bruxelles, Liège, Namur et Charleroi pour tout vitrage cassé ou effraction. Nos experts assurent une mise en sécurité immédiate de votre domicile ou commerce.</p>
+          </div>
+          <div class="u-card">
+            <span class="u-icon">🔓</span>
+            <h3>Assistance sécurisation</h3>
+            <p>Des panneaux provisoires solides et étanches sont installés immédiatement pour sécuriser votre ouverture. Cette solution temporaire protège votre bâtiment durant toute la fabrication de votre nouveau vitrage.</p>
+          </div>
+          <div class="u-card">
+            <span class="u-icon">🪟</span>
+            <h3>Remplacement vitre sur mesure</h3>
+            <p>Nous installons tous types de vitrages, du simple au triple feuilleté. Nos techniciens effectuent systématiquement les mesures selon nos standards professionnels pour garantir l'exactitude des dimensions.</p>
+          </div>
+        </div>
+        <div class="urgence-cta">
+          <a href="tel:+32475204216" class="btn-red" style="font-size:19px;padding:16px 36px;">📞 Urgence — 0475 204 216</a>
+          <div class="sub">Gratuit · Sans engagement · Réponse immédiate</div>
+        </div>
+
+        <!-- SÉPARATEUR -->
+        <div style="border-top:1px solid rgba(255,255,255,.12);margin:52px 0 48px;position:relative;text-align:center">
+          <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 18px;border-radius:20px;white-space:nowrap">Nos services</span>
+        </div>
+
+        <!-- PARTIE 2 : SERVICES -->
+        <div class="services-header" style="margin-bottom:28px">
+          <div class="sec-badge"><span class="pulse"></span> &nbsp;Nos expertises</div>
+          <div class="sec-title">Tous nos services</div>
+          <div class="sec-sub">Particuliers et professionnels — un seul interlocuteur pour tous vos besoins en vitrage</div>
+        </div>
+        <div class="services-grid">
+          <div class="s-card">
+            <span class="s-icon">🔁</span>
+            <h3>Remplacement de vitres</h3>
+            <p>Simple, double et triple vitrage. Sur mesure ou standard. Remplacement le jour même si disponible.</p>
+          </div>
+          <div class="s-card">
+            <span class="s-icon">🛡️</span>
+            <h3>Vitrage anti-effraction</h3>
+            <p>Verre feuilleté, sécurit, trempé (SP10, SP15). Solution idéale après cambriolage.</p>
+          </div>
+          <div class="s-card">
+            <span class="s-icon">🌡️</span>
+            <h3>Double &amp; triple vitrage</h3>
+            <p>Isolation thermique et phonique. Argon ou krypton. Châssis alu, PVC ou bois.</p>
+          </div>
+          <div class="s-card">
+            <span class="s-icon">🪟</span>
+            <h3>Baies vitrées &amp; vérandas</h3>
+            <p>Pose, remplacement et réparation de grandes surfaces vitrées sur mesure.</p>
+          </div>
+          <div class="s-card">
+            <span class="s-icon">🏢</span>
+            <h3>Vitrines commerciales</h3>
+            <p>Réparation ou remplacement de devantures. Intervention prioritaire pour votre commerce.</p>
+          </div>
+          <div class="s-card">
+            <span class="s-icon">🔧</span>
+            <h3>Sécurisation provisoire</h3>
+            <p>Pose de panneaux MDF ou plexiglas en attendant la vitre définitive.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="process-inner">
+        <div class="sec-title">Comment ça marche ?</div>
+        <div class="sec-sub">
+          Rapide, simple, sans tracas — de l'appel à la vitre posée.
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-n">1</div>
+            <div class="step-body">
+              <h3>Vous appelez le 0475 204 216</h3>
+              <p>
+                Décrivez votre situation en 2 minutes. Devis gratuit et
+                immédiat, disponible 24h/24.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div class="step-body">
+              <h3>On arrive chez vous</h3>
+              <p>
+                Un vitrier qualifié se déplace en 30 à 60 minutes avec tout le
+                matériel nécessaire.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div class="step-body">
+              <h3>Sécurisation immédiate</h3>
+              <p>
+                Si besoin, sécurisation provisoire avec panneau MDF ou plexiglas
+                résistant, sans délai.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-n">4</div>
+            <div class="step-body">
+              <h3>Remplacement définitif</h3>
+              <p>
+                Vitre posée sur mesure, finitions soignées. Facture claire —
+                prix respecté comme annoncé.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASSURANCE -->
+    <section class="assurance">
+      <div class="assurance-inner">
+        <div class="assurance-icon">🏦</div>
+        <div class="assurance-body">
+          <div class="sec-badge" style="margin-bottom: 14px">
+            <span class="pulse"></span> &nbsp;Agréé par les assurances
+          </div>
+          <h2>Intervention souvent <em>100% remboursée</em></h2>
+          <p>
+            Vous avez une assurance habitation avec garantie
+            <strong>bris de glace</strong> ou <strong>incendie</strong> ? Nous
+            gérons directement les démarches avec votre assureur. Dans de
+            nombreux cas l'intervention est
+            <strong>entièrement couverte</strong>. 
+          </p>
+          <div class="assurance-checks">
+            <div class="a-check">
+              <span class="ok">✔</span> Seule la franchise est à votre charge
+            </div>
+            <div class="a-check">
+              <span class="ok">✔</span> Démarches gérées pour vous
+            </div>
+            <div class="a-check">
+              <span class="ok">✔</span> Facturation directe assureur
+            </div>
+          </div>
+          <a href="tel:+32475204216" class="btn-outline-white"
+            >📞 Parlez-nous de votre assurance</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- AVIS GOOGLE -->
+    <section class="avis" id="avis">
+      <div class="avis-inner">
+        <div class="google-header">
+          <div>
+            <h2>Avis de nos clients</h2>
+            <p>
+              Avis vérifiés Google &nbsp;·&nbsp; Vitrier Assistance Belgique
+            </p>
+          </div>
+          <div class="google-score">
+            <div class="g-text">
+              <span class="g-b">G</span><span class="g-r">o</span
+              ><span class="g-y">o</span><span class="g-g">g</span
+              ><span class="g-r">l</span><span class="g-b">e</span>
+            </div>
+            <div class="g-div"></div>
+            <div class="g-num">4.9</div>
+            <div class="g-right">
+              <div class="g-stars">★★★★★</div>
+              <div class="g-count">+200 avis</div>
+            </div>
+          </div>
+        </div>
+        <div class="avis-grid">
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av1">SM</div>
+              <div>
+                <div class="avis-name">Sophie M.</div>
+                <div class="avis-date">Il y a 2 semaines</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Vitre de porte cassée suite à un cambriolage. Intervention en 45
+              minutes, travail impeccable. Très professionnel et rassurant. Je
+              recommande vivement !
+            </p>
+            <div class="avis-loc">📍 Bruxelles — Ixelles</div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av2">MD</div>
+              <div>
+                <div class="avis-name">Marc D.</div>
+                <div class="avis-date">Il y a 1 mois</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Fenêtre brisée un dimanche soir. Le technicien était là en moins
+              d'une heure. Prix honnête et devis parfaitement respecté. Service
+              irréprochable !
+            </p>
+            <div class="avis-loc">📍 Namur</div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av3">KB</div>
+              <div>
+                <div class="avis-name">Karim B.</div>
+                <div class="avis-date">Il y a 3 semaines</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Vitrine de mon restaurant cassée le matin. Tout réparé avant
+              l'ouverture du midi. Réactivité et sérieux au top, je recommande
+              sans hésiter !
+            </p>
+            <div class="avis-loc">📍 Charleroi</div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av4">NV</div>
+              <div>
+                <div class="avis-name">Nathalie V.</div>
+                <div class="avis-date">Il y a 2 mois</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Double vitrage remplacé rapidement. Ils ont même géré les
+              démarches avec mon assurance. Vraiment top du début à la fin,
+              merci !
+            </p>
+            <div class="avis-loc">📍 Wavre — Brabant Wallon</div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av5">JL</div>
+              <div>
+                <div class="avis-name">Jean-Louis P.</div>
+                <div class="avis-date">Il y a 5 jours</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Appel à 23h après un bris de glace. Vitrier présent en 50 minutes,
+              très calme et efficace. Sécurisation parfaite, aucun stress.
+              Excellent !
+            </p>
+            <div class="avis-loc">📍 Bruxelles — Schaerbeek</div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avatar av6">AC</div>
+              <div>
+                <div class="avis-name">Amina C.</div>
+                <div class="avis-date">Il y a 1 semaine</div>
+              </div>
+            </div>
+            <div class="avis-stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span
+              ><span>★</span>
+            </div>
+            <p>
+              Suite à un cambriolage, j'étais paniquée. Le vitrier est arrivé
+              rapidement, m'a rassurée et a tout réparé avec soin. Merci
+              infiniment !
+            </p>
+            <div class="avis-loc">📍 Liège</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stats-inner">
+        <div class="stat">
+          <div class="stat-n">60 min</div>
+          <div class="stat-l">Délai moyen d'intervention</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">24h/24</div>
+          <div class="stat-l">Disponibilité 7j/7</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">+2 000</div>
+          <div class="stat-l">Interventions réalisées</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">98%</div>
+          <div class="stat-l">Clients satisfaits</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">+20 ans</div>
+          <div class="stat-l">D'expérience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n" style="display:flex;align-items:center;justify-content:center;gap:6px;">
+            4.9<span style="color:#FBBC05;font-size:20px;">★</span>
+          </div>
+          <div class="stat-l">Note Google</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="faq-inner">
+        <div class="sec-title">Questions fréquentes</div>
+        <div
+          class="sec-sub"
+          style="color: var(--muted); font-size: 15px; margin-bottom: 4px"
+        >
+          Tout ce que vous devez savoir avant d'appeler.
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Combien de temps pour une intervention d'urgence ?
+              <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Généralement 30 à 60 minutes après votre appel dans la zone de
+              Bruxelles. Légèrement plus long pour Namur, Charleroi et le reste
+              de la Wallonie — nous faisons tout pour arriver au plus vite, y
+              compris la nuit.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Vous intervenez la nuit et le week-end ?
+              <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Oui, 24h/24, 7j/7 — nuits, week-ends et jours fériés inclus. Un
+              vitrier qualifié est toujours disponible pour les urgences, quelle
+              que soit l'heure.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Mon assurance peut-elle couvrir l'intervention ?
+              <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Dans la plupart des cas oui. Si vous avez une assurance avec
+              garantie bris de glace ou incendie, nous gérons directement les
+              démarches avec votre compagnie et prenons en charge votre
+              franchise.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Et si la vitre doit être faite sur mesure ?
+              <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Nous sécurisons immédiatement avec un panneau MDF ou plexiglas
+              résistant. La vitre définitive est posée sous 24 à 72h une fois
+              fabriquée sur mesure dans nos ateliers.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Le devis est vraiment gratuit ? <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Absolument — gratuit et sans engagement, par téléphone ou sur
+              place. Vous connaissez le prix exact avant toute intervention. Pas
+              de mauvaise surprise sur la facture.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="tFaq(this)">
+              Quels types de vitrages remplacez-vous ?
+              <span class="faq-arr">▼</span>
+            </div>
+            <div class="faq-a">
+              Tous : simple, double (4/16/4…), triple vitrage, feuilleté, trempé
+              (sécurit), anti-effraction, acoustique, thermique, survitrage,
+              Velux, verre armé. Nous avons une solution pour chaque situation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="contact">
+      <h2>
+        Votre vitre est cassée ?<br /><em
+          >N'attendez pas une minute de plus.</em
+        >
+      </h2>
+      <p>
+        Chaque heure sans vitrage sécurisé est un risque pour vous et votre
+        famille. Un vitrier est disponible maintenant — appelez, on arrive.
+      </p>
+      <a href="tel:+32475204216" class="cta-big">📞 0475 204 216</a>
+      <div class="cta-info">Disponible 24h/24 — 7j/7 — Jours fériés inclus</div>
+      <div class="cta-trust">
+        <div class="cta-trust-item">
+          <span class="ok">✔</span> Devis gratuit
+        </div>
+        <div class="cta-trust-item">
+          <span class="ok">✔</span> Sans engagement
+        </div>
+        <div class="cta-trust-item">
+          <span class="ok">✔</span> Prix fixe annoncé
+        </div>
+        <div class="cta-trust-item">
+          <span class="ok">✔</span> Agréé assurances
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONES -->
+    <section class="zones" id="zones">
+      <div class="zones-inner">
+        <div class="sec-title">Zones d'intervention</div>
+        <div class="sec-sub">Nous intervenons dans toute la Belgique francophone et ses alentours.</div>
+        <div class="zones-tags">
+          <span class="zone">📍 Anderlecht</span>
+          <span class="zone">📍 Auderghem</span>
+          <span class="zone">📍 Berchem-Sainte-Agathe</span>
+          <span class="zone">📍 Bruxelles (Ville)</span>
+          <span class="zone">📍 Etterbeek</span>
+          <span class="zone">📍 Evere</span>
+          <span class="zone">📍 Forest</span>
+          <span class="zone">📍 Ganshoren</span>
+          <span class="zone">📍 Ixelles</span>
+          <span class="zone">📍 Jette</span>
+          <span class="zone">📍 Koekelberg</span>
+          <span class="zone">📍 Molenbeek-Saint-Jean</span>
+          <span class="zone">📍 Saint-Gilles</span>
+          <span class="zone">📍 Saint-Josse-ten-Noode</span>
+          <span class="zone">📍 Schaerbeek</span>
+          <span class="zone">📍 Uccle</span>
+          <span class="zone">📍 Watermael-Boitsfort</span>
+          <span class="zone">📍 Woluwe-Saint-Lambert</span>
+          <span class="zone">📍 Woluwe-Saint-Pierre</span>
+          <span class="zone">📍 Brabant Wallon</span>
+          <span class="zone">📍 Namur</span>
+          <span class="zone">📍 Charleroi</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="fc">
+          <h4>Vitrier Assistance</h4>
+          <p>Votre vitrier d'urgence<br />en Belgique. 24h/24, 7j/7.</p>
+          <a href="tel:+32475204216" class="fc-phone" style="margin-top: 10px"
+            >📞 0475 204 216</a
+          >
+         
+        </div>
+        <div class="fc">
+          <h4>Services</h4>
+          
+          <a href="intervention-de-nuit.html">Interventions de nuit</a>
+          <a href="types-de-vitrage.html">Les types de vitrages</a>
+          <a href="remplacement-de-vitres.html">Remplacement de vitres</a>
+          <a href="assistance-securisation.html">Assistance sécurisation</a>
+          <a href="assistance-depannage-urgence.html">Assistance dépannage urgent</a>
+          <a href="vitrine-commerce.html">Vitrine de commerce et magasin</a>
+          
+        </div>
+
+     
+        <div class="fc">
+          <h4>Zones</h4>
+          <a href="#zones">Vitrier Bruxelles</a>
+          <a href="#zones">Vitrier Namur</a>
+          <a href="#zones">Vitrier Charleroi</a>
+          <a href="#zones">Vitrier Brabant Wallon</a>
+          
+        </div>
+        <div class="fc">
+          <h4>Infos</h4>
+          
+          
+          <a href="nos-prix.html">Nos prix</a>
+          <a href="nos-devis.html">Nos devis</a>
+          <a href="nos-adresses.html">Nos adresses</a>
+          
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 VitrierAssistance.be — Tous droits réservés &nbsp;·&nbsp; TVA :
+        BE XXXX.XXX.XXX
+      </div>
+    </footer>
+
+    <!-- STICKY MOBILE -->
+    <div class="sticky">
+      <div class="sticky-top">
+        ⚡ Vitrier disponible maintenant — appuyez pour appeler
+      </div>
+      <a href="tel:+32475204216">📞 Appeler maintenant — 0475 204 216</a>
+    </div>
+
+    <script data-cfasync="false" src="
