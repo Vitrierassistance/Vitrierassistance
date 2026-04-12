@@ -1336,6 +1336,147 @@
           padding-bottom: 72px;
         }
       }
+
+      /* ============================================================
+         RESPONSIVE GLOBAL — corrections complètes mobile/tablette
+         ============================================================ */
+
+      /* --- btn-red : 50px → taille mobile correcte (CRITIQUE) --- */
+      @media (max-width: 768px) {
+        .btn-red {
+          font-size: 20px;
+          padding: 15px 24px;
+          width: 100%;
+          justify-content: center;
+          box-shadow: none;
+        }
+      }
+
+      /* --- Réduction générale des paddings de sections --- */
+      @media (max-width: 768px) {
+        .urgence  { padding: 40px 16px; }
+        .services { padding: 40px 16px; }
+        .process  { padding: 40px 16px; }
+        .assurance{ padding: 40px 16px; }
+        .avis     { padding: 40px 16px; }
+        .faq      { padding: 40px 16px; }
+        .cta-final{ padding: 48px 16px; }
+        .zones    { padding: 36px 16px; }
+        .pillars  { padding: 28px 16px; }
+        .stats    { padding: 28px 16px; }
+        footer    { padding: 36px 16px 24px; }
+      }
+
+      /* --- Titres de sections --- */
+      @media (max-width: 768px) {
+        .sec-title      { font-size: 22px; }
+        .urgence-cta    { margin-top: 24px; }
+      }
+
+      /* --- hero-urgency : wrap sur mobile --- */
+      @media (max-width: 520px) {
+        .hero-urgency {
+          flex-wrap: wrap;
+          font-size: 12px;
+          padding: 8px 12px;
+          gap: 6px;
+        }
+      }
+
+      /* --- hero-trust : wrap propre --- */
+      @media (max-width: 480px) {
+        .hero-trust { gap: 8px; }
+        .htrust     { font-size: 11px; gap: 5px; }
+      }
+
+      /* --- urgence-grid : 1 colonne sous 420px --- */
+      @media (max-width: 420px) {
+        .urgence-grid { grid-template-columns: 1fr; }
+      }
+
+      /* --- services-grid : 1 colonne sous 380px --- */
+      @media (max-width: 380px) {
+        .services-grid { grid-template-columns: 1fr; }
+        .s-card p      { display: block; font-size: 12px; }
+        .s-icon        { font-size: 22px; }
+      }
+
+      /* --- assurance : empiler verticalement sur mobile --- */
+      @media (max-width: 768px) {
+        .assurance-inner    { flex-direction: column; gap: 20px; }
+        .assurance-body h2  { font-size: 22px; }
+        .assurance-body p   { font-size: 14px; }
+        .btn-outline-white  { width: 100%; justify-content: center; }
+      }
+
+      /* --- process steps : réduire gap --- */
+      @media (max-width: 480px) {
+        .step        { gap: 14px; }
+        .step-body h3{ font-size: 15px; }
+      }
+
+      /* --- avis grid --- */
+      @media (max-width: 380px) {
+        .avis-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 768px) {
+        .google-header h2 { font-size: 20px; }
+      }
+
+      /* --- google-score : colonne sur très petit --- */
+      @media (max-width: 380px) {
+        .google-score {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+        .g-div { width: 60px; height: 1px; }
+        .g-num { font-size: 32px; }
+      }
+
+      /* --- stats : 2 colonnes fixes sous 360px --- */
+      @media (max-width: 360px) {
+        .stats-inner { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .stat-n      { font-size: 22px; }
+        .stat        { padding: 16px 8px; }
+      }
+
+      /* --- cta-final : ajustements fins --- */
+      @media (max-width: 480px) {
+        .cta-final h2  { font-size: 22px; }
+        .cta-final p   { font-size: 13px; }
+        .cta-trust     { gap: 12px; }
+        .cta-trust-item{ font-size: 12px; }
+      }
+
+      /* --- zones tags : plus compact --- */
+      @media (max-width: 480px) {
+        .zone { font-size: 12px; padding: 5px 10px; }
+      }
+
+      /* --- footer grid : 2 col → 1 col sous 360px --- */
+      @media (max-width: 360px) {
+        .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      }
+
+      /* --- hero-brand et h1 : très petits écrans --- */
+      @media (max-width: 360px) {
+        .hero-brand   { font-size: 36px; letter-spacing: -0.5px; }
+        .hero h1      { font-size: 22px; }
+        .hero-tagline { font-size: 12px; }
+      }
+
+      /* --- nav : resserrer sur 320px --- */
+      @media (max-width: 360px) {
+        nav          { padding: 10px 12px; }
+        .logo        { font-size: 14px; }
+        .nav-cta     { font-size: 12px; padding: 8px 10px; }
+      }
+
+      /* --- pillars : 1 col sous 280px --- */
+      @media (max-width: 280px) {
+        .pillars-grid { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
   <body>
