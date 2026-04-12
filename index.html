@@ -174,7 +174,7 @@
       .hero {
         background: linear-gradient(150deg, var(--dark) 0%, var(--dark2) 100%);
         color: #fff;
-        padding: 60px 24px 52px;
+        padding: 16px 24px 52px;
         position: relative;
         overflow: hidden;
       }
@@ -226,7 +226,7 @@
         color: #fff;
         letter-spacing: clamp(-0.5px, -0.3vw, -3px);
         line-height: 1;
-        margin-top: 16px;
+        margin-top: 0;
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -234,26 +234,21 @@
       }
       .hero-brand span { color: #fff; }
       .hero-tagline {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 48px;
         width: 100%;
-        font-size: clamp(13px, 2.05vw, 20px);
-        font-weight: 800;
+        font-size: clamp(13px, 4vw, 40px);
+        font-weight: 700;
         color: rgba(255, 255, 255, 0.88);
-        letter-spacing: -0.3px;
+        letter-spacing: -0.2px;
         line-height: 1;
-        margin-top: 10px;
-        margin-bottom: 22px;
+        margin-top: 12px;
+        margin-bottom: 28px;
       }
       .hero-tagline span { white-space: nowrap; }
       .hero-tagline span + span::before {
-        content: '·';
-        margin: 0 10px;
-        color: rgba(255,255,255,0.3);
-        font-weight: 400;
+        content: none;
       }
       @media (max-width: 600px) {
         .hero-tagline { flex-wrap: wrap; gap: 4px 0; justify-content: flex-start; }
@@ -276,7 +271,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin-top: 16px;
+        margin-top: 36px;
         margin-bottom: 36px;
       }
       .btn-call {
@@ -420,6 +415,51 @@
         }
         .htrust {
           font-size: 12px;
+        }
+      }
+
+      /* ===================== TRUST BAR ===================== */
+      .trust-bar {
+        background: #f0f2f5;
+        border-bottom: 1px solid #e0e0e0;
+        border-top: 1px solid #e0e0e0;
+        padding: 18px 24px;
+        margin-top: 10px;
+      }
+      .trust-bar-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px 0;
+      }
+      .tb-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+      .tb-ok {
+        color: #fff;
+        font-weight: 900;
+        background: #00CD40;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 11px;
+      }
+      @media (max-width: 600px) {
+        .trust-bar-inner {
+          justify-content: flex-start;
+          gap: 10px 20px;
         }
       }
 
@@ -1279,11 +1319,123 @@
         color: var(--red);
       }
 
+      /* ===================== FORMULAIRE NON URGENT ===================== */
+      .contact-form-section {
+        background: linear-gradient(150deg, #0C345A 0%, #071e38 100%);
+        padding: 60px 24px;
+        position: relative;
+        overflow: hidden;
+      }
+      .contact-form-section::before {
+        content: '';
+        position: absolute;
+        top: -80px; right: -80px;
+        width: 400px; height: 400px;
+        background: rgba(255,255,255,.05);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .cf-inner {
+        max-width: 720px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .cf-header { margin-bottom: 32px; }
+      .cf-title {
+        font-size: 32px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.2;
+        margin: 14px 0 10px;
+      }
+      .cf-title em { color: #00CD40; font-style: normal; }
+      .cf-sub {
+        font-size: 15px;
+        color: rgba(255,255,255,.6);
+        line-height: 1.7;
+      }
+      .cf-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .cf-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .cf-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .cf-full { grid-column: 1 / -1; }
+      .cf-field label {
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(255,255,255,.65);
+        letter-spacing: .4px;
+        text-transform: uppercase;
+      }
+      .cf-field input,
+      .cf-field select,
+      .cf-field textarea {
+        background: rgba(255,255,255,.1);
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 9px;
+        padding: 13px 16px;
+        font-size: 14px;
+        color: #fff;
+        font-family: inherit;
+        transition: border .2s, background .2s;
+        outline: none;
+        width: 100%;
+      }
+      .cf-field input::placeholder,
+      .cf-field textarea::placeholder {
+        color: rgba(255,255,255,.35);
+      }
+      .cf-field select option { background: #0C345A; color: #fff; }
+      .cf-field input:focus,
+      .cf-field select:focus,
+      .cf-field textarea:focus {
+        border-color: #00CD40;
+        background: rgba(255,255,255,.15);
+      }
+      .cf-field textarea { resize: vertical; min-height: 100px; }
+      .cf-btn {
+        background: #00CD40;
+        color: #fff;
+        border: none;
+        border-radius: 9px;
+        padding: 15px 32px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background .2s, transform .2s;
+        font-family: inherit;
+        align-self: flex-start;
+        box-shadow: 0 4px 20px rgba(0,205,64,.3);
+      }
+      .cf-btn:hover { background: #009e31; transform: translateY(-1px); }
+      .cf-note {
+        font-size: 12px;
+        color: rgba(255,255,255,.4);
+        margin-top: -4px;
+      }
+      @media (max-width: 600px) {
+        .cf-row { grid-template-columns: 1fr; }
+        .cf-title { font-size: 24px; }
+        .cf-btn { width: 100%; justify-content: center; }
+        .contact-form-section { padding: 40px 16px; }
+      }
+
       /* ===================== FOOTER ===================== */
       footer {
-        background: linear-gradient(150deg, #0C345A 0%, #071e38 100%);
-        color: rgba(255, 255, 255, 0.5);
+        background: #f0f2f5;
+        color: #555;
         padding: 48px 24px 28px;
+        border-top: 1px solid #e0e0e0;
       }
       .footer-grid {
         max-width: 900px;
@@ -1295,17 +1447,17 @@
       .fc h4 {
         font-size: 14px;
         font-weight: 700;
-        color: #fff;
+        color: #1a1a1a;
         margin-bottom: 14px;
         letter-spacing: 0.3px;
       }
       .fc p {
         font-size: 13px;
-        color: rgba(255, 255, 255, 0.45);
+        color: #666;
         line-height: 1.9;
       }
       .fc a {
-        color: rgba(255, 255, 255, 0.45);
+        color: #666;
         font-size: 13px;
         line-height: 2.1;
         text-decoration: none;
@@ -1313,7 +1465,7 @@
         transition: color 0.2s;
       }
       .fc a:hover {
-        color: #fff;
+        color: #1a1a1a;
       }
       .fc-phone {
         color: #00CD40 !important;
@@ -1324,10 +1476,10 @@
         max-width: 900px;
         margin: 24px auto 0;
         padding-top: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        border-top: 1px solid #d0d0d0;
         text-align: center;
         font-size: 12px;
-        color: rgba(255, 255, 255, 0.2);
+        color: #aaa;
       }
       @media (max-width: 480px) {
         .footer-grid {
@@ -1559,46 +1711,31 @@
     <section class="hero">
       <div class="hero-inner">
 
-        <div class="live-badge">
-          <span class="pulse"></span> &nbsp;Vitrier disponible maintenant
-        </div>
         <strong class="hero-brand">Vitrier<span>Assistance</span>.be</strong>
 
-        <div class="hero-features">
-          <div class="hf-item">
-            <span class="hf-icon">🕐</span>
-            <span class="hf-text">24h/24 &amp; 7j/7</span>
-          </div>
-          <div class="hf-item">
-            <span class="hf-icon">⚡</span>
-            <span class="hf-text">Dans l'heure</span>
-          </div>
-          <div class="hf-item">
-            <span class="hf-icon">🔒</span>
-            <span class="hf-text">Sécurisation</span>
-          </div>
-          <div class="hf-item">
-            <span class="hf-icon">🪟</span>
-            <span class="hf-text">Réparation de vitre</span>
-          </div>
+        <div class="hero-tagline">
+          <span>24h/24 &amp; 7j/7</span>
+          <span>Dans l'heure chez vous</span>
+          <span>Sécurisation</span>
+          <span>Réparation de vitre</span>
         </div>
 
         <div class="hero-btns">
           <a href="tel:+32475204216" class="btn-call">📞 0475 204 216</a>
         </div>
-        <div class="hero-trust">
-          <div class="htrust">
-            <span class="ok">✔</span> Intervention 30–60 min
-          </div>
-          <div class="htrust"><span class="ok">✔</span> Devis gratuit</div>
-          <div class="htrust"><span class="ok">✔</span> Agréé assurances</div>
-          <div class="htrust"><span class="ok">✔</span> Sécurisation</div>
-          <div class="htrust">
-            <span class="ok">✔</span> +20 ans d'expérience
-          </div>
-        </div>
       </div>
     </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+      <div class="trust-bar-inner">
+        <div class="tb-item"><span class="tb-ok">✔</span> Intervention 30–60 min</div>
+        <div class="tb-item"><span class="tb-ok">✔</span> Devis gratuit</div>
+        <div class="tb-item"><span class="tb-ok">✔</span> Agréé assurances</div>
+        <div class="tb-item"><span class="tb-ok">✔</span> Sécurisation</div>
+        <div class="tb-item"><span class="tb-ok">✔</span> +20 ans d'expérience</div>
+      </div>
+    </div>
 
     <!-- PILLARS -->
     <div class="pillars">
@@ -2122,6 +2259,61 @@
       </div>
     </section>
 
+    <!-- FORMULAIRE INTERVENTION NON URGENTE -->
+    <section class="contact-form-section" id="contact-form">
+      <div class="cf-inner">
+        <div class="cf-header">
+          <div class="sec-badge" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);">✉️ &nbsp;Intervention non urgente</div>
+          <h2 class="cf-title">Demande d'intervention<br><em>non urgente</em></h2>
+          <p class="cf-sub">Remplacement planifié, devis, double vitrage, vitrine — remplissez ce formulaire et nous vous répondons sous 24h.</p>
+        </div>
+        <form class="cf-form" action="https://formsubmit.co/vitrier.assistance@outlook.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande d'intervention — VitrierAssistance.be">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://vitrierassistance.be">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label>Prénom &amp; Nom *</label>
+              <input type="text" name="nom" placeholder="Jean Dupont" required>
+            </div>
+            <div class="cf-field">
+              <label>Téléphone *</label>
+              <input type="tel" name="telephone" placeholder="04XX XXX XXX" required>
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="jean@exemple.be">
+            </div>
+            <div class="cf-field">
+              <label>Ville / Commune *</label>
+              <input type="text" name="ville" placeholder="Bruxelles, Namur…" required>
+            </div>
+          </div>
+          <div class="cf-field cf-full">
+            <label>Type d'intervention *</label>
+            <select name="type" required>
+              <option value="" disabled selected>Choisissez un type</option>
+              <option>Remplacement double vitrage</option>
+              <option>Remplacement simple vitrage</option>
+              <option>Vitrine commerciale</option>
+              <option>Vitrage feuilleté / sécurité</option>
+              <option>Triple vitrage</option>
+              <option>Véranda / baie vitrée</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="cf-field cf-full">
+            <label>Description</label>
+            <textarea name="message" rows="4" placeholder="Décrivez votre situation, dimensions approximatives, étage…"></textarea>
+          </div>
+          <button type="submit" class="cf-btn">✉️ Envoyer ma demande</button>
+          <p class="cf-note">Réponse sous 24h · Devis gratuit · Sans engagement</p>
+        </form>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
       <div class="footer-grid">
@@ -2139,6 +2331,7 @@
           <a href="intervention-de-nuit.html">Interventions de nuit</a>
           <a href="types-de-vitrage.html">Les types de vitrages</a>
           <a href="remplacement-de-vitres.html">Remplacement de vitres</a>
+          <a href="assistance-securisation.html">Assistance sécurisation</a>
           <a href="assistance-depannage-urgence.html">Assistance dépannage urgent</a>
           <a href="vitrine-commerce.html">Vitrine de commerce et magasin</a>
           
