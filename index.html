@@ -348,6 +348,49 @@
         color: #fff;
       }
 
+      /* --- bloc 4 mots hero --- */
+      .hero-features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 20px 0 0;
+      }
+      .hf-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        padding: 16px 10px;
+        text-align: center;
+        transition: background 0.2s;
+      }
+      .hf-item:hover {
+        background: rgba(255, 255, 255, 0.14);
+      }
+      .hf-icon {
+        font-size: 22px;
+        line-height: 1;
+      }
+      .hf-text {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+      }
+      @media (max-width: 600px) {
+        .hero-features {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+          margin: 16px 0 0;
+        }
+        .hf-item { padding: 14px 8px; }
+        .hf-text  { font-size: 11px; }
+      }
+
       @media (max-width: 768px) {
         .hero {
           padding: 32px 16px 40px;
@@ -1514,12 +1557,30 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-inner">
-        <h1>24h/24 &amp; 7j/7 · Dans l'heure<br /><em>Sécurisation · Réparation de vitre</em></h1>
+
         <div class="live-badge">
           <span class="pulse"></span> &nbsp;Vitrier disponible maintenant
         </div>
         <strong class="hero-brand">Vitrier<span>Assistance</span>.be</strong>
 
+        <div class="hero-features">
+          <div class="hf-item">
+            <span class="hf-icon">🕐</span>
+            <span class="hf-text">24h/24 &amp; 7j/7</span>
+          </div>
+          <div class="hf-item">
+            <span class="hf-icon">⚡</span>
+            <span class="hf-text">Dans l'heure</span>
+          </div>
+          <div class="hf-item">
+            <span class="hf-icon">🔒</span>
+            <span class="hf-text">Sécurisation</span>
+          </div>
+          <div class="hf-item">
+            <span class="hf-icon">🪟</span>
+            <span class="hf-text">Réparation de vitre</span>
+          </div>
+        </div>
 
         <div class="hero-urgency">
           <span class="pulse"></span>
