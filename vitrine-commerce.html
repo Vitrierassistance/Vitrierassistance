@@ -102,15 +102,38 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:13px 24px;disp
 .cta-ti .ok{color:#2ecc71}
 @media(max-width:600px){.btn-red,.btn-ghost-w{width:100%;justify-content:center}}
 
+/* FORMULAIRE NON URGENT */
+.contact-form-section{background:linear-gradient(150deg,#0C345A 0%,#071e38 100%);padding:60px 24px;position:relative;overflow:hidden}
+.contact-form-section::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(255,255,255,.05);border-radius:50%;pointer-events:none}
+.cf-inner{max-width:720px;margin:0 auto;position:relative}
+.cf-header{margin-bottom:32px}
+.cf-title{font-size:32px;font-weight:900;color:#fff;line-height:1.2;margin:14px 0 10px}
+.cf-title em{color:#00CD40;font-style:normal}
+.cf-sub{font-size:15px;color:rgba(255,255,255,.6);line-height:1.7}
+.cf-form{display:flex;flex-direction:column;gap:14px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf-field{display:flex;flex-direction:column;gap:6px}
+.cf-full{grid-column:1/-1}
+.cf-field label{font-size:12px;font-weight:700;color:rgba(255,255,255,.65);letter-spacing:.4px;text-transform:uppercase}
+.cf-field input,.cf-field select,.cf-field textarea{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:13px 16px;font-size:14px;color:#fff;font-family:inherit;transition:border .2s,background .2s;outline:none;width:100%}
+.cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,.35)}
+.cf-field select option{background:#0C345A;color:#fff}
+.cf-field input:focus,.cf-field select:focus,.cf-field textarea:focus{border-color:#00CD40;background:rgba(255,255,255,.15)}
+.cf-field textarea{resize:vertical;min-height:100px}
+.cf-btn{background:#00CD40;color:#fff;border:none;border-radius:9px;padding:15px 32px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s,transform .2s;font-family:inherit;align-self:flex-start;box-shadow:0 4px 20px rgba(0,205,64,.3)}
+.cf-btn:hover{background:#009e31;transform:translateY(-1px)}
+.cf-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:-4px}
+@media(max-width:600px){.cf-row{grid-template-columns:1fr}.cf-title{font-size:24px}.cf-btn{width:100%}.contact-form-section{padding:40px 16px}}
+
 /* FOOTER */
-footer{background:linear-gradient(150deg,#0C345A 0%,#071e38 100%);color:rgba(255,255,255,.5);padding:48px 24px 28px}
+footer{background:#f0f2f5;color:#555;padding:48px 24px 28px;border-top:1px solid #e0e0e0}
 .footer-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px}
-.fc h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:.3px}
-.fc p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
-.fc a{color:rgba(255,255,255,.45);font-size:13px;line-height:2.1;text-decoration:none;display:block;transition:color .2s}
-.fc a:hover{color:#fff}
+.fc h4{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:14px;letter-spacing:.3px}
+.fc p{font-size:13px;color:#666;line-height:1.9}
+.fc a{color:#666;font-size:13px;line-height:2.1;text-decoration:none;display:block;transition:color .2s}
+.fc a:hover{color:#1a1a1a}
 .fc-phone{color:#00CD40 !important;font-size:18px !important;font-weight:800 !important}
-.footer-bottom{max-width:900px;margin:24px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);text-align:center;font-size:12px;color:rgba(255,255,255,.2)}
+.footer-bottom{max-width:900px;margin:24px auto 0;padding-top:18px;border-top:1px solid #d0d0d0;text-align:center;font-size:12px;color:#aaa}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr 1fr}}
 
 /* STICKY */
@@ -181,6 +204,61 @@ footer{background:linear-gradient(150deg,#0C345A 0%,#071e38 100%);color:rgba(255
   </div>
 </div>
 </div>
+
+<!-- FORMULAIRE INTERVENTION NON URGENTE -->
+<section class="contact-form-section" id="contact-form">
+  <div class="cf-inner">
+    <div class="cf-header">
+      <div class="sec-badge" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);">✉️ &nbsp;Intervention non urgente</div>
+      <h2 class="cf-title">Demande d'intervention<br><em>non urgente</em></h2>
+      <p class="cf-sub">Remplacement planifié, devis, double vitrage, vitrine — remplissez ce formulaire et nous vous répondons sous 24h.</p>
+    </div>
+    <form class="cf-form" action="https://formsubmit.co/vitrier.assistance@outlook.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle demande d'intervention — VitrierAssistance.be">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://vitrierassistance.be">
+      <div class="cf-row">
+        <div class="cf-field">
+          <label>Prénom &amp; Nom *</label>
+          <input type="text" name="nom" placeholder="Jean Dupont" required>
+        </div>
+        <div class="cf-field">
+          <label>Téléphone *</label>
+          <input type="tel" name="telephone" placeholder="04XX XXX XXX" required>
+        </div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jean@exemple.be">
+        </div>
+        <div class="cf-field">
+          <label>Ville / Commune *</label>
+          <input type="text" name="ville" placeholder="Bruxelles, Namur…" required>
+        </div>
+      </div>
+      <div class="cf-field cf-full">
+        <label>Type d'intervention *</label>
+        <select name="type" required>
+          <option value="" disabled selected>Choisissez un type</option>
+          <option>Remplacement double vitrage</option>
+          <option>Remplacement simple vitrage</option>
+          <option>Vitrine commerciale</option>
+          <option>Vitrage feuilleté / sécurité</option>
+          <option>Triple vitrage</option>
+          <option>Véranda / baie vitrée</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="cf-field cf-full">
+        <label>Description</label>
+        <textarea name="message" rows="4" placeholder="Décrivez votre situation, dimensions approximatives, étage…"></textarea>
+      </div>
+      <button type="submit" class="cf-btn">✉️ Envoyer ma demande</button>
+      <p class="cf-note">Réponse sous 24h · Devis gratuit · Sans engagement</p>
+    </form>
+  </div>
+</section>
 
 <footer>
   <div class="footer-grid">
