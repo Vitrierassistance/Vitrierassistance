@@ -28,8 +28,8 @@
         --red: #c0392b;
         --red-dark: #922b21;
         --red-light: #fadbd8;
-        --dark: #0f1923;
-        --dark2: #1e0a0a;
+        --dark: #0C345A;
+        --dark2: #071e38;
         --border: #e5e5e5;
         --muted: #666;
         --bg: #f7f7f7;
@@ -37,7 +37,7 @@
 
       /* ===================== MOBILE EMERGENCY ===================== */
       .mob-emergency {
-        background: var(--red);
+        background: #00CD40;
         padding: 14px 16px;
         display: flex;
         flex-direction: column;
@@ -141,7 +141,7 @@
         color: var(--red);
       }
       .nav-cta {
-        background: var(--red);
+        background: #00CD40;
         color: #fff;
         padding: 10px 20px;
         border-radius: 8px;
@@ -155,7 +155,7 @@
         white-space: nowrap;
       }
       .nav-cta:hover {
-        background: var(--red-dark);
+        background: #009e31;
       }
       @media (max-width: 768px) {
         .nav-links {
@@ -217,7 +217,7 @@
         letter-spacing: -0.5px;
       }
       .hero h1 em {
-        color: #e74c3c;
+        color: #fff;
         font-style: normal;
       }
       .hero-brand {
@@ -229,7 +229,33 @@
         margin-top: 16px;
         display: block;
       }
-      .hero-brand span { color: #e74c3c; }
+      .hero-brand span { color: #fff; }
+      .hero-tagline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: clamp(13px, 2.05vw, 20px);
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.88);
+        letter-spacing: -0.3px;
+        line-height: 1;
+        margin-top: 10px;
+        margin-bottom: 22px;
+      }
+      .hero-tagline span { white-space: nowrap; }
+      .hero-tagline span + span::before {
+        content: '·';
+        margin: 0 10px;
+        color: rgba(255,255,255,0.3);
+        font-weight: 400;
+      }
+      @media (max-width: 600px) {
+        .hero-tagline { flex-wrap: wrap; gap: 6px 0; justify-content: flex-start; }
+        .hero-tagline span + span::before { margin: 0 6px; }
+      }
       @media (max-width: 768px) {
         .hero-brand { font-size: 72px; letter-spacing: -1px; margin-top: 12px; }
       }
@@ -250,7 +276,7 @@
         margin-bottom: 36px;
       }
       .btn-call {
-        background: var(--red);
+        background: #00CD40;
         color: #fff;
         font-size: 50px;
         font-weight: 900;
@@ -264,7 +290,7 @@
         box-shadow: 0 4px 24px rgba(192, 57, 43, 0.45);
       }
       .btn-call:hover {
-        background: var(--red-dark);
+        background: #009e31;
         transform: translateY(-1px);
       }
       .btn-ghost {
@@ -559,7 +585,7 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: var(--red);
+        background: #00CD40;
         color: #fff;
         font-size: 50px;
         font-weight: 700;
@@ -570,7 +596,7 @@
         box-shadow: 0 4px 20px rgba(192, 57, 43, 0.35);
       }
       .btn-red:hover {
-        background: var(--red-dark);
+        background: #009e31;
         transform: translateY(-1px);
       }
       @media (max-width: 480px) {
@@ -1110,7 +1136,7 @@
         position: relative;
       }
       .cta-big {
-        background: var(--red);
+        background: #00CD40;
         color: #fff;
         font-size: 28px;
         font-weight: 900;
@@ -1125,7 +1151,7 @@
         position: relative;
       }
       .cta-big:hover {
-        background: var(--red-dark);
+        background: #009e31;
         transform: translateY(-2px);
       }
       .cta-info {
@@ -1242,7 +1268,7 @@
         color: #fff;
       }
       .fc-phone {
-        color: #e74c3c !important;
+        color: #00CD40 !important;
         font-size: 18px !important;
         font-weight: 800 !important;
       }
@@ -1286,7 +1312,7 @@
         justify-content: center;
         gap: 10px;
         padding: 15px;
-        background: var(--red);
+        background: #00CD40;
         color: #fff;
         font-size: 18px;
         font-weight: 900;
@@ -1296,10 +1322,10 @@
       @keyframes stickyGlow {
         0%,
         100% {
-          background: var(--red);
+          background: #00CD40;
         }
         50% {
-          background: var(--red-dark);
+          background: #009e31;
         }
       }
       @media (max-width: 768px) {
@@ -1346,11 +1372,13 @@
           <span class="pulse"></span> &nbsp;Vitrier disponible maintenant
         </div>
         <strong class="hero-brand">Vitrier<span>Assistance</span>.be</strong>
-        <p class="hero-desc">
-          Cambriolage, vandalisme, accident : nos vitriers professionnels
-          sécurisent et remplacent votre vitrage en urgence — 24h/24, 7j/7,
-          partout en Belgique francophone.
-        </p>
+        <div class="hero-tagline">
+          <span>24h/24 et 7j/7</span>
+          <span>Dans l'heure</span>
+          <span>Sécurisation</span>
+          <span>Réparation de vitre</span>
+        </div>
+
         <div class="hero-urgency">
           <span class="pulse"></span>
           <span

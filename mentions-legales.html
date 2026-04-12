@@ -8,10 +8,10 @@
 <style>*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;line-height:1.6}
-:root{--red:#c0392b;--red-dark:#922b21;--red-light:#fadbd8;--dark:#0f1923;--dark2:#1e0a0a;--border:#e5e5e5;--muted:#666;--bg:#f7f7f7}
+:root{--red:#c0392b;--red-dark:#922b21;--red-light:#fadbd8;--dark:#0C345A;--dark2:#071e38;--border:#e5e5e5;--muted:#666;--bg:#f7f7f7}
 
 /* MOBILE EMERGENCY */
-.mob-emergency{background:var(--red);padding:14px 16px;display:flex;flex-direction:column;align-items:center;gap:5px}
+.mob-emergency{background:#00CD40;padding:14px 16px;display:flex;flex-direction:column;align-items:center;gap:5px}
 .mob-top{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.85);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
 .pulse{width:8px;height:8px;background:#fff;border-radius:50%;animation:pulseAnim 1.4s infinite;display:inline-block;flex-shrink:0}
 @keyframes pulseAnim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.2;transform:scale(1.5)}}
@@ -28,8 +28,8 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:13px 24px;disp
 .nav-links{display:flex;gap:20px;list-style:none}
 .nav-links a{font-size:13px;color:#555;text-decoration:none;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--red)}
-.nav-cta{background:var(--red);color:#fff;padding:10px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:7px;transition:background .2s;white-space:nowrap}
-.nav-cta:hover{background:var(--red-dark)}
+.nav-cta{background:#00CD40;color:#fff;padding:10px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:7px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:#009e31}
 @media(max-width:768px){.nav-links{display:none}.nav-cta{font-size:14px;padding:9px 15px}.logo{font-size:16px}}
 
 /* BANNER (replaces hero for inner pages) */
@@ -93,8 +93,8 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:13px 24px;disp
 .cta-block::before{content:'';position:absolute;bottom:-50px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:rgba(192,57,43,.1);border-radius:50%;pointer-events:none}
 .cta-block h3{font-size:24px;font-weight:900;color:#fff;margin-bottom:10px;position:relative}
 .cta-block p{font-size:14px;color:rgba(255,255,255,.62);margin-bottom:24px;line-height:1.7;position:relative}
-.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:16px;font-weight:700;padding:14px 30px;border-radius:9px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(192,57,43,.4);margin:5px;position:relative}
-.btn-red:hover{background:var(--red-dark);transform:translateY(-1px)}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:#00CD40;color:#fff;font-size:16px;font-weight:700;padding:14px 30px;border-radius:9px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(192,57,43,.4);margin:5px;position:relative}
+.btn-red:hover{background:#009e31;transform:translateY(-1px)}
 .btn-ghost-w{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;font-size:15px;font-weight:600;padding:14px 26px;border-radius:9px;text-decoration:none;border:1px solid rgba(255,255,255,.2);margin:5px;transition:background .2s;position:relative}
 .btn-ghost-w:hover{background:rgba(255,255,255,.18)}
 .cta-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:20px;position:relative}
@@ -109,15 +109,15 @@ footer{background:#0d0d0d;color:rgba(255,255,255,.5);padding:48px 24px 28px}
 .fc p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.9}
 .fc a{color:rgba(255,255,255,.45);font-size:13px;line-height:2.1;text-decoration:none;display:block;transition:color .2s}
 .fc a:hover{color:#fff}
-.fc-phone{color:#e74c3c !important;font-size:18px !important;font-weight:800 !important}
+.fc-phone{color:#00CD40 !important;font-size:18px !important;font-weight:800 !important}
 .footer-bottom{max-width:900px;margin:24px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:12px;color:rgba(255,255,255,.2)}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr 1fr}}
 
 /* STICKY */
 .sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;flex-direction:column}
-.sticky-top{background:#0f1923;padding:4px;text-align:center;font-size:11px;color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.3px}
-.sticky a{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;background:var(--red);color:#fff;font-size:18px;font-weight:900;text-decoration:none;animation:stickyGlow 2.5s infinite}
-@keyframes stickyGlow{0%,100%{background:var(--red)}50%{background:var(--red-dark)}}
+.sticky-top{background:#0C345A;padding:4px;text-align:center;font-size:11px;color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.3px}
+.sticky a{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;background:#00CD40;color:#fff;font-size:18px;font-weight:900;text-decoration:none;animation:stickyGlow 2.5s infinite}
+@keyframes stickyGlow{0%,100%{background:#00CD40}50%{background:#009e31}}
 @media(max-width:768px){.sticky{display:flex}body{padding-bottom:72px}}</style>
 </head>
 <body>
@@ -159,7 +159,7 @@ footer{background:#0d0d0d;color:rgba(255,255,255,.5);padding:48px 24px 28px}
       <li><strong>Adresse d'exploitation :</strong> Rue de Grand Bigard 14, 1084 Berchem-Sainte-Agathe</li>
       <li><strong>Numéro de TVA :</strong> BE XXXX.XXX.XXX</li>
       <li><strong>Téléphone :</strong> 0475 204 216</li>
-      <li><strong>Email :</strong> info@vitrierassistance.be</li>
+      <li><strong>Email :</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40292e262f0036293432292532213333293334212e23256e2225">[email&#160;protected]</a></li>
     </ul>
   </div>
   <div class="card-dark">
@@ -200,7 +200,7 @@ footer{background:#0d0d0d;color:rgba(255,255,255,.5);padding:48px 24px 28px}
       <h4>Vitrier Assistance</h4>
       <p>Votre vitrier d'urgence<br>en Belgique. 24h/24, 7j/7.</p>
       <a href="tel:+32475204216" class="fc-phone" style="margin-top:10px">📞 0475 204 216</a>
-      <a href="mailto:info@vitrierassistance.be" style="margin-top:4px">info@vitrierassistance.be</a>
+      <a href="/cdn-cgi/l/email-protection#650c0b030a25130c11170c00170416160c1611040b06004b0700" style="margin-top:4px"><span class="__cf_email__" data-cfemail="c3aaada5ac83b5aab7b1aaa6b1a2b0b0aab0b7a2ada0a6eda1a6">[email&#160;protected]</span></a>
     </div>
     <div class="fc">
       <h4>Services</h4>
@@ -227,11 +227,4 @@ footer{background:#0d0d0d;color:rgba(255,255,255,.5);padding:48px 24px 28px}
       <a href="index.html#zones">Charleroi</a>
     </div>
   </div>
-  <div class="footer-bottom">© 2025 VitrierAssistance.be — Tous droits réservés &nbsp;·&nbsp; TVA : BE XXXX.XXX.XXX</div>
-</footer>
-<div class="sticky">
-  <div class="sticky-top">⚡ Vitrier disponible maintenant — appuyez pour appeler</div>
-  <a href="tel:+32475204216">📞 Appeler maintenant — 0475 204 216</a>
-</div>
-</body>
-</html>
+  <div class="footer-bottom">© 2025 VitrierAssistance.be — Tous droi
