@@ -221,13 +221,16 @@
         font-style: normal;
       }
       .hero-brand {
-        font-size: 80px;
+        font-size: clamp(26px, 8vw, 80px);
         font-weight: 900;
         color: #fff;
-        letter-spacing: -3px;
+        letter-spacing: clamp(-0.5px, -0.3vw, -3px);
         line-height: 1;
         margin-top: 16px;
         display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .hero-brand span { color: #fff; }
       .hero-tagline {
@@ -253,14 +256,14 @@
         font-weight: 400;
       }
       @media (max-width: 600px) {
-        .hero-tagline { flex-wrap: wrap; gap: 6px 0; justify-content: flex-start; }
+        .hero-tagline { flex-wrap: wrap; gap: 4px 0; justify-content: flex-start; }
         .hero-tagline span + span::before { margin: 0 6px; }
       }
-      @media (max-width: 768px) {
-        .hero-brand { font-size: 72px; letter-spacing: -1px; margin-top: 12px; }
-      }
       @media (max-width: 480px) {
-        .hero-brand { font-size: 52px; letter-spacing: -.5px; }
+        .hero-tagline span { white-space: normal; }
+      }
+      @media (max-width: 768px) {
+        .hero-brand { margin-top: 12px; }
       }
       .hero-desc {
         font-size: 17px;
@@ -1314,9 +1317,11 @@
         padding: 15px;
         background: #00CD40;
         color: #fff;
-        font-size: 18px;
+        font-size: clamp(14px, 4vw, 18px);
         font-weight: 900;
         text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
         animation: stickyGlow 2.5s infinite;
       }
       @keyframes stickyGlow {
@@ -1461,7 +1466,7 @@
 
       /* --- hero-brand et h1 : très petits écrans --- */
       @media (max-width: 360px) {
-        .hero-brand   { font-size: 36px; letter-spacing: -0.5px; }
+        .hero-brand   { margin-top: 8px; }
         .hero h1      { font-size: 22px; }
         .hero-tagline { font-size: 12px; }
       }
