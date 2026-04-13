@@ -174,42 +174,52 @@
       .hero {
         background: linear-gradient(150deg, #0C345A 0%, #071e38 100%);
         color: #fff;
-        padding: clamp(20px, 4vw, 48px) 16px clamp(24px, 4vw, 48px);
+        padding: clamp(28px, 5vw, 60px) 24px clamp(32px, 5vw, 60px);
         position: relative;
         overflow: hidden;
         text-align: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
       }
       .hero-inner {
-        max-width: 520px;
+        max-width: clamp(300px, 80vw, 560px);
+        width: 100%;
         margin: 0 auto;
         position: relative;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .hero-brand {
-        font-size: clamp(44px, 14vw, 104px);
+        font-size: clamp(48px, 13vw, 110px);
         font-weight: 900;
         color: #fff;
         letter-spacing: -1px;
-        line-height: 0.95;
+        line-height: 0.92;
         text-transform: uppercase;
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: clamp(20px, 3vw, 32px);
+        width: 100%;
       }
       .hero-brand span { color: #fff; }
       .hero-tagline {
         background: #fff;
-        border-radius: 14px;
-        padding: clamp(20px, 4vw, 36px) clamp(16px, 4vw, 32px);
+        border-radius: 16px;
+        padding: clamp(24px, 4vw, 44px) clamp(20px, 4vw, 40px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: clamp(10px, 2.5vw, 18px);
-        margin-bottom: 20px;
+        gap: clamp(12px, 2.5vw, 22px);
+        margin-bottom: clamp(20px, 3vw, 32px);
         text-align: center;
         width: 100%;
+        box-shadow: 0 8px 32px rgba(0,0,0,.15);
       }
       .hero-tagline span {
-        font-size: clamp(28px, 9vw, 62px);
+        font-size: clamp(26px, 8vw, 58px);
         font-weight: 900;
         color: #0C345A;
         line-height: 1.05;
@@ -222,27 +232,32 @@
       .hero-desc { display: none; }
       .hero-btns {
         display: flex;
-        margin-top: 0;
-        margin-bottom: 0;
         width: 100%;
       }
       .btn-call {
         background: #00CD40;
         color: #fff;
-        font-size: clamp(18px, 5.5vw, 30px);
+        font-size: clamp(20px, 5vw, 32px);
         font-weight: 900;
-        padding: clamp(16px, 3vw, 22px) 0;
-        border-radius: 12px;
+        padding: clamp(18px, 3vw, 26px) 0;
+        border-radius: 14px;
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 12px;
         transition: all 0.25s;
         box-shadow: 0 6px 32px rgba(0, 205, 64, 0.4);
         width: 100%;
         letter-spacing: 0.5px;
       }
+      .btn-call:hover {
+        background: #009e31;
+        transform: translateY(-2px);
+      }
+      .btn-ghost { display: none; }
+      .hero-trust { display: none; }
+      .hero-urgency { display: none; }
       .btn-call:hover {
         background: #009e31;
         transform: translateY(-2px);
